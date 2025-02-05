@@ -1,4 +1,3 @@
-// src/components/menu/styles.js
 import styled from 'styled-components';
 
 export const Sidebar = styled.div`
@@ -7,7 +6,7 @@ export const Sidebar = styled.div`
   top: 0;
   bottom: 24px;
   width: 280px;
-  height: calc(100vh - 48px); /* Ajusta a altura para ocupar toda a viewport, menos o padding */
+  height: calc(100vh - 48px);
   padding: 24px 0;
   display: flex;
   flex-direction: column;
@@ -29,7 +28,7 @@ export const MenuTitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `;
 
 
@@ -43,7 +42,7 @@ export const MenuItens = styled.div`
   gap: 2px; 
   width: 280px; 
   height: 286px; 
-  margin-top: auto; 
+  margin-top: 0px; 
   opacity: 1; 
 `;
 
@@ -93,9 +92,10 @@ export const HelpBoxSubtitle = styled.div`
   color: #FFFFFF; 
 `;
 
+
 export const HelpSection = styled.div`
-  width: 220px; /* Largura fixa */
-  height: 198px; /* Altura */
+  width: calc(100% - 80px); /* Ajusta a largura levando em consideração as margens esquerda e direita */
+  height: 198px; 
   padding: 16px;
   gap: 16px; /* Espaçamento */
   border-radius: 6px;
@@ -104,9 +104,12 @@ export const HelpSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start; /* Centraliza o HelpSection lateralmente */
-  margin: 0 auto; /* Centraliza o HelpSection */
+  align-items: flex-start;
+  margin-left: 30px; 
+  margin-right: 40px; 
+  margin-bottom: 10px;
 `;
+
 
 export const HelpButton = styled.button`
   background: #1BC681;
@@ -118,8 +121,8 @@ export const HelpButton = styled.button`
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  width: 144px; /* Largura do botão */
-  height: 38px; /* Altura do botão */
+  width: 144px; 
+  height: 38px; 
   padding: 8px 24px; 
   gap: 10px; 
   border-radius: 6px; 
@@ -129,14 +132,14 @@ export const HelpButton = styled.button`
   opacity: 1;
 
   &:hover {
-    background: #FFFFFF; /* Mantém a cor de fundo branca */
-    color: #1BC681; /* Cor do texto ao passar o mouse */
-    border: 2px solid #1BC681; /* Cor da borda ao passar o mouse */
+    background: #FFFFFF; 
+    color: #1BC681; 
+    border: 2px solid #1BC681;
   }
 
   &.active {
-    background: #1BC681; /* Cor de fundo do botão ativo */
-    color: #FFFFFF; /* Cor do texto do botão ativo */
-    border: 2px solid #FFFFFF; /* Borda branca */
+    background: #1BC681; 
+    color: #FFFFFF; 
+    border: 2px solid #FFFFFF; 
   }
 `;

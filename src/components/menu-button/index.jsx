@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { MenuButton } from './styles';
-import icons from '../icons'; // Certifique-se de que o caminho está correto
+import icons from '../icons'; 
 
 const Button = ({ children, active, icon, ...props }) => {
-  const SvgIcon = icons[icon];
   const [isHovered, setIsHovered] = useState(false);
 
-  const iconColor = active ? '#FFFFFF' : isHovered ? '#484848' : '#1E1E1E';
+  const SvgIcon = active ? icons[icon].white : icons[icon].black;
 
   return (
     <MenuButton
@@ -15,7 +14,7 @@ const Button = ({ children, active, icon, ...props }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {icon && <SvgIcon width={24} height={24} fill={iconColor} />}
+      {icon && <SvgIcon width={24} height={24} />}
       {children}
     </MenuButton>
   );
