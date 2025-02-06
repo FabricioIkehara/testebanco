@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: row;
   margin-top: 20px;
   background-color: #1BC681;
-  height: 100vh; /* Para ocupar toda a altura da tela */
+  height: 100vh;
   margin-right: 100px;
   margin-bottom: 0;
 `;
@@ -22,6 +22,11 @@ export const CardsContainer = styled.div`
   width: 1160px;
   gap: 16px;
   margin-left: 20px;
+
+  
+  @media (min-width: 1600px) {
+    width: 1560px;
+  }
 `;
 
 export const LeftCard = styled.div`
@@ -37,6 +42,10 @@ export const LeftCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (min-width: 1600px) {
+    width: 732px;
+  }
 `;
 
 export const RightCard = styled.div`
@@ -51,6 +60,10 @@ export const RightCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (min-width: 1600px) {
+    width: 733px;
+  }
 `;
 
 export const CardContents = styled.div`
@@ -64,10 +77,14 @@ export const CardContents = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (min-width: 1600px) {
+    width: 733px;
+  }
 `;
 
 export const Card = styled.div`
-  width: 225.2px; /* Ajuste para largura adequada */
+  width: 225.2px; 
   height: 140px;
   padding: 16px;
   border-radius: 8px 0px 0px 0px;
@@ -77,6 +94,10 @@ export const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   opacity: 1;
+
+  @media (min-width: 1600px) {
+    width: 425.2px;
+  }
 `;
 
 export const CardTitle = styled.h3`

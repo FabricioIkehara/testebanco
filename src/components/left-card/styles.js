@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const LeftCardContainer = styled.div`
-  width: 532px; 
+  width: 532px;
   height: 300.49px;
   margin-left: 20px;
   margin-top: 16px;
@@ -12,6 +12,10 @@ export const LeftCardContainer = styled.div`
   opacity: 1;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 1600px) {
+    width: 732px; 
+  }
 `;
 
 export const CardTitle = styled.h3`
@@ -52,7 +56,7 @@ export const CardDetails = styled.div`
     color: #666;
   }
 
-   .value {
+  .value {
     font-size: 20px;
     font-family: 'Lato', sans-serif;
     font-weight: 600;
@@ -61,7 +65,6 @@ export const CardDetails = styled.div`
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #484848;
-    
   }
 
   .value-limit {
@@ -75,7 +78,7 @@ export const CardDetails = styled.div`
     color: #484848;
   }
 
-.value-last-buy {
+  .value-last-buy {
     font-size: 20px;
     font-family: 'Lato', sans-serif;
     font-weight: 600;
@@ -85,15 +88,15 @@ export const CardDetails = styled.div`
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #484848;
-    max-width: 100%; /* Adiciona um limite de largura máxima */
-    white-space: nowrap; /* Impede a quebra de linha */
-    text-overflow: ellipsis; /* Adiciona reticências para texto longo */
-}
+    max-width: 100%; 
+    white-space: nowrap; /* se caso quebrar o texto */
+    text-overflow: ellipsis; 
+  }
 
-/* Lógica para ajustar dinamicamente o tamanho da fonte */
-.value-last-buy[data-length="long"] {
+ 
+  .value-last-buy[data-length="long"] {
     font-size: 18px;
-}
+  }
 
   .limite-disponivel {
     width: 130px;
@@ -123,9 +126,9 @@ export const CardDetails = styled.div`
 `;
 
 export const CardImage = styled.div`
-  position: relative;
+  
   width: 240px;
-  height: 140px; /* Ajuste a altura conforme necessário */
+  height: 140px; 
   padding: 16px;
   border-radius: 8px;
   background: linear-gradient(248.54deg, #1bc681 1.38%, #0d603f 89.61%);
@@ -172,7 +175,6 @@ export const CardNumberContainer = styled.div`
   line-height: 17.4px;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
 `;
 
 export const CardInfoContainer = styled.div`
@@ -189,23 +191,24 @@ export const CardName = styled.div`
 
 export const CardValidity = styled.div`
   font-size: 12px;
-  text-align: center;
+  margin-left: 50px;
   position: relative;
   margin-bottom: 20px;
-  left: -80px;  // 30px (antes) + 50px (agora)
-  top: 10px;   // 5px (antes) + 5px (agora)
+  left: -50px;  
+  top: 10px;
+  margin-left: 30px;
 `;
 
 export const FooterSection = styled.div`
   display: flex;
-  align-items: flex-start;  // Corrigido o typo "fle" para "flex-start"
+  align-items: flex-start;
   margin-top: 24px;
-  width: 484px;  // Ajuste da largura para preencher 484px
-  height: 38px;  // Ajuste da altura para 38px
-  gap: 0px;  // Espaçamento entre elementos
-  justify-content: space-between;  // Alinhamento dos elementos com espaço entre eles
-  opacity: 1;  
-  box-sizing: border-box; 
+  width: 484px;  
+  height: 38px; 
+  gap: 0px;  
+  justify-content: space-between; 
+  opacity: 1;
+  box-sizing: border-box;
 `;
 
 export const ProgressBarWrapper = styled.div`
@@ -215,7 +218,7 @@ export const ProgressBarWrapper = styled.div`
 `;
 
 export const ProgressBar = styled.div`
-  width: 100%; /* Usa a largura total do wrapper */
+  width: 100%; 
   background-color: #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
@@ -224,7 +227,7 @@ export const ProgressBar = styled.div`
   div {
     height: 8px;
     background-color: #1bc681;
-    width: 100%; /* Usa a largura total da barra */
+    width: 100%; 
   }
 `;
 

@@ -1,4 +1,3 @@
-// styles.js para Carteira
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -14,8 +13,8 @@ export const Content = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center; // Centraliza o conteúdo se necessário
-  justify-content: flex-start; // Garante que a margem tenha efeito
+  align-items: center; 
+  justify-content: flex-start; 
 `;
 
 export const PlaceholderContainer = styled.div`
@@ -42,5 +41,5 @@ export const PlaceholderText = styled.span`
   color: #484848;
   width: auto;
   height: auto; 
-  white-space: nowrap; // Garante que o texto não quebre a linha
+  white-space: nowrap; 
 `;

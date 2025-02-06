@@ -13,6 +13,8 @@ export const ImageSection = styled.div`
   justify-content: flex-start;
   gap: 0px;
   margin-top: 0px;
+  padding: 0; 
+  margin: 0;
   opacity: 1;
   box-sizing: border-box;
   background-color: transparent;
@@ -35,13 +37,11 @@ export const LoginSection = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center; 
+  justify-content: center; 
   padding: 20px;
   background-color: #ffffff;
-  margin-left: 100px;
 `;
-
 
 export const Title1 = styled.h1`
   margin-bottom: 0px;
@@ -49,15 +49,10 @@ export const Title1 = styled.h1`
   font-weight: 700;
   line-height: 57.6px;
   color: #484848;
-
   font-family: Lato;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 57.6px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
 `;
 
 export const Title2 = styled.h2`
@@ -71,7 +66,6 @@ export const Title2 = styled.h2`
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
 `;
 
 export const LoginForm = styled.form`
@@ -91,7 +85,6 @@ export const FormGroup = styled.div`
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
 `;
 
 export const Label = styled.label`
@@ -138,7 +131,6 @@ export const LoginButton = styled.button`
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 
-
   &:hover {
     background-color: #17A36B;
   }
@@ -163,7 +155,6 @@ export const SignupTitle = styled.h3`
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   width: 640px;
-
 `;
 
 export const SignupLink = styled.a`
@@ -185,5 +176,4 @@ export const Emoji = styled.span`
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
 `;

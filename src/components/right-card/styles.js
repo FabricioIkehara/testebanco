@@ -1,4 +1,3 @@
-// src/components/right-card/styles.js
 import styled from 'styled-components';
 
 export const Card = styled.div`
@@ -10,6 +9,10 @@ export const Card = styled.div`
   width: 100%;
   max-width: 533px;
   margin-top: 15px;
+
+  @media (min-width: 1600px) {
+    max-width: 733px; 
+  }
 `;
 
 export const CardTitle = styled.h3`
@@ -101,12 +104,7 @@ export const LoadMoreButton = styled.button`
   gap: 10px;
   border-radius: 6px;
 
-
-
-
   &:hover {
     background-color: #17a674;
   }
 `;
-
-

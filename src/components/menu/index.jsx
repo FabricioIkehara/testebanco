@@ -61,7 +61,7 @@ const Menu = () => {
       <HelpSection>
         <HelpBoxTitle>PRECISA DE AJUDA?</HelpBoxTitle>
         <HelpBoxSubtitle>Fale com um de nossos especialistas</HelpBoxSubtitle>
-        <HelpButton>CONTATAR</HelpButton>
+        <HelpButton onClick={() => alert('Entrar em Contato')}>CONTATAR</HelpButton>
       </HelpSection>
     </Sidebar>
   );

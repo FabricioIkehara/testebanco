@@ -20,7 +20,7 @@ import {
   LimitText,
   VectorYellow,
   VectorRed,
-  LogoContainer  // Import the new styled component
+  LogoContainer  
 } from './styles';
 
 import chipSvg from '../../assets/chip.svg';
@@ -89,7 +89,7 @@ const LeftCard = ({
             <LimitText>{limiteMensal}</LimitText>
           </LimitTextWrapper>
         </ProgressBarWrapper>
-        <Button>MAIS DETALHES</Button>
+        <Button onClick={() => alert('Carregar mais detalhes')}>MAIS DETALHES</Button>
       </FooterSection>
     </LeftCardContainer>
   );

@@ -1,4 +1,3 @@
-// styles.js para Carteira
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -29,8 +28,8 @@ export const PlaceholderContainer = styled.div`
   justify-content: center;
   gap: 10px;
   margin-left: 20px;
-  margin-bottom: 20px; // Adiciona um espaço abaixo
-  flex-shrink: 0; // Garante que o elemento não encolha
+  margin-bottom: 20px; 
+  flex-shrink: 0; 
 `;
 
 export const PlaceholderText = styled.span`
@@ -42,5 +41,5 @@ export const PlaceholderText = styled.span`
   color: #484848;
   width: auto;
   height: auto; 
-  white-space: nowrap; // Garante que o texto não quebre a linha
+  white-space: nowrap;
 `;

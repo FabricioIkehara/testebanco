@@ -16,7 +16,6 @@ const TopBar = ({ userName }) => {
       return;
     }
 
-    // Processar a busca aqui
     console.log('Buscando por:', searchTerm);
   };
 

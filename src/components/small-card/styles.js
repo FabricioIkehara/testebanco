@@ -1,4 +1,3 @@
-// src/components/small-card/styles.js
 import styled from 'styled-components';
 
 export const Card = styled.div`
@@ -13,6 +12,10 @@ export const Card = styled.div`
   box-shadow: 0px 4px 4px 0px #00000040;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 1600px) {
+    width: calc(50% - 10px); 
+  }
 
   &.custom-percentage-card {
     color: #484848;
@@ -37,7 +40,7 @@ export const Card = styled.div`
   }
 
   &.custom-plus-card {
-    width: 533px; /* Ajuste da largura para alinhar com o RightCard */
+    width: 570px; 
     height: 140px;
     background: #FFFFFF;
     color: #484848; 

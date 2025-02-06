@@ -10,12 +10,14 @@ import Servicos from './pages/servicos/index.jsx';
 import Configuracoes from './pages/configuracoes/index.jsx';
 import Dashboard from './pages/dashboard/index.jsx';
 import TopBar from './components/top/index.jsx'; 
-import ErrorPage from './pages/404/index'; // Importa a página de erro
+import ErrorPage from './pages/404/index';
 
 const MainContainer = styled.div`
-  margin-left: 280px; /* Espaço para o menu fixo */
-  margin-top: 84px; /* Espaço para a barra superior fixa */
-  padding: 24px;
+  ${({ path }) => path !== '/login' && `
+    margin-left: 280px; 
+    margin-top: 84px; 
+  `}
+  padding: 0px;
 `;
 
 const App = () => {
@@ -33,10 +35,10 @@ const App = () => {
       {location.pathname !== '/login' && (
         <>
           <Menu />
-          <TopBar userName="Usuário" /> {/* Adiciona a barra superior */}
+          <TopBar userName="Usuário" /> 
         </>
       )}
-      <MainContainer>
+      <MainContainer path={location.pathname}>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
@@ -45,7 +47,7 @@ const App = () => {
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/configuracoes" element={<Configuracoes />} />
           <Route path="/" element={<Navigate to="/login" />} />
-          <Route path="*" element={<ErrorPage />} /> {/* Adiciona a rota de erro */}
+          <Route path="*" element={<ErrorPage />} /> 
         </Routes>
       </MainContainer>
     </ThemeProvider>

@@ -1,4 +1,3 @@
-// src/components/menu-button/styles.js
 import styled from 'styled-components';
 
 export const MenuButton = styled.button`
@@ -11,18 +10,18 @@ export const MenuButton = styled.button`
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  width: 240px; /* Largura do botão */
-  height: 54px; /* Altura do botão */
+  width: 240px; 
+  height: 54px; 
   padding: 16px 24px;
-  display: flex; /* Ajusta o display para flex */
-  align-items: center; /* Centraliza o ícone e o texto */
-  gap: 8px; /* Espaço entre o ícone e o texto */
-  border-radius: 12px 0px 0px 12px; /* Cantos arredondados */
+  display: flex; 
+  align-items: center;
+  gap: 8px; 
+  border-radius: 12px 0px 0px 12px; 
   border: none;
   cursor: pointer;
-  margin-bottom: 8px; /* Espaçamento entre os botões */
+  margin-bottom: 8px; 
   opacity: 1;
-  margin-left: 40px; /* Adiciona margem à esquerda */
+  margin-left: 40px; 
 
   &:hover {
     background: ${props => props.active ? '#1BC681' : '#FFFFFF'};
