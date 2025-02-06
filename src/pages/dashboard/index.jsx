@@ -8,7 +8,7 @@ import LeftCard from '../../components/left-card/index';
 import RightCard from '../../components/right-card/index';
 
 const Dashboard = () => {
-  const userName = "Dak Prescott"; 
+  const userName = "Tide Cardoso"; 
 
   const cardsData = [
     {

@@ -18,14 +18,14 @@ import {
   ProgressBarWrapper,
   LimitTextWrapper,
   LimitText,
-  VectorYellow,
-  VectorRed,
+  VectorWrapper,
   LogoContainer  
 } from './styles';
 
 import chipSvg from '../../assets/chip.svg';
 import wifiSvg from '../../assets/wifi.svg';
-import logoBranco from '../../assets/logo-branco.svg';  // Import the logo SVG
+import logoBranco from '../../assets/logo-branco.svg';
+import vectorCombinedSvg from '../../assets/group8.svg'; // Import the combined SVG
 
 const generateRandomCardNumber = () => {
   return Array(4).fill(0).map(() => Math.floor(1000 + Math.random() * 9000)).join(' ');
@@ -63,21 +63,22 @@ const LeftCard = ({
                 <div>Validade</div>
                 <div>{month}/{year}</div>
               </CardValidity>
-              <VectorYellow />
-              <VectorRed />
+              <VectorWrapper>
+                <img src={vectorCombinedSvg} alt="Combined Vectors" />
+              </VectorWrapper>
             </CardInfoContainer>
           </CardImage>
         </CardImageSection>
         <CardDetailsSection>
-            <CardDetails>
-              <div className="limite-disponivel">Limite disponível</div>
-              <div className="value value-limit">{limiteDisponivel}</div>
-            </CardDetails>
-            <CardDetails>
-              <div className="ultima-compra">Última compra</div>
-              <div className="value value-last-buy">{`${ultimaCompra.local}   ${ultimaCompra.valor}`}</div>
-            </CardDetails>
-          </CardDetailsSection>
+          <CardDetails>
+            <div className="limite-disponivel">Limite disponível</div>
+            <div className="value value-limit">{limiteDisponivel}</div>
+          </CardDetails>
+          <CardDetails>
+            <div className="ultima-compra">Última compra</div>
+            <div className="value value-last-buy">{`${ultimaCompra.local}   ${ultimaCompra.valor}`}</div>
+          </CardDetails>
+        </CardDetailsSection>
       </CardContent>
       <FooterSection>
         <ProgressBarWrapper>

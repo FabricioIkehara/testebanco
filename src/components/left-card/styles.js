@@ -93,7 +93,6 @@ export const CardDetails = styled.div`
     text-overflow: ellipsis; 
   }
 
- 
   .value-last-buy[data-length="long"] {
     font-size: 18px;
   }
@@ -126,7 +125,6 @@ export const CardDetails = styled.div`
 `;
 
 export const CardImage = styled.div`
-  
   width: 240px;
   height: 140px; 
   padding: 16px;
@@ -182,7 +180,9 @@ export const CardInfoContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  position: relative; 
 `;
+
 
 export const CardName = styled.div`
   font-size: 14px;
@@ -191,13 +191,12 @@ export const CardName = styled.div`
 
 export const CardValidity = styled.div`
   font-size: 12px;
-  margin-left: 50px;
-  position: relative;
   margin-bottom: 20px;
-  left: -50px;  
-  top: 10px;
-  margin-left: 30px;
+  position: relative;
+  left: -65px; /* Move 30px para a esquerda */
 `;
+
+
 
 export const FooterSection = styled.div`
   display: flex;
@@ -267,26 +266,13 @@ export const Button = styled.button`
   }
 `;
 
-export const VectorYellow = styled.div`
+export const VectorWrapper = styled.div`
   position: absolute;
-  background: #DC9E3F;
-  width: 17.4px;
-  height: 17.4px;
-  top: 90%;
-  right: 15px;
-  transform: translateY(-50%);
-  opacity: 1;
-  border-radius: 50%;
-`;
+  bottom: 10px;
+  right: 10px;
 
-export const VectorRed = styled.div`
-  position: absolute;
-  background: #E5031B;
-  width: 17.4px;
-  height: 17.4px;
-  top: 90%;
-  right: 25px;
-  transform: translateY(-50%);
-  opacity: 1;
-  border-radius: 50%;
+  img {
+    width: 50px; /* ajuste o tamanho conforme necessário */
+    height: auto;
+  }
 `;
