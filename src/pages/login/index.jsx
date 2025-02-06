@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   LoginContainer, ImageSection, LoginSection, LoginImage, Title1, 
   Title2, LoginForm, FormGroup, Label, InputField, Options, ForgotPassword, 
@@ -6,8 +7,28 @@ import {
 } from './styles';
 import loginImage from '../../assets/login.png';
 
-
 const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // Validação dos campos vazios
+    if (username.trim() === '' || password.trim() === '') {
+      alert('Por favor, preencha todos os campos.');
+      return;
+    }
+
+    // Verificação de credenciais
+    if (username === 'admin' && password === 'admin') {
+      navigate('/dashboard');
+    } else {
+      alert('Usuário ou senha incorretos!');
+    }
+  };
+
   return (
     <LoginContainer>
       <ImageSection>
@@ -18,14 +39,24 @@ const Login = () => {
           Bem vindo <Emoji>:)</Emoji>
         </Title1>
         <Title2>Entre na sua conta</Title2>
-        <LoginForm>
+        <LoginForm onSubmit={handleLogin}>
           <FormGroup>
             <Label htmlFor="username">Usuário</Label>
-            <InputField type="text" id="username" />
+            <InputField 
+              type="text" 
+              id="username" 
+              value={username} 
+              onChange={(e) => setUsername(e.target.value)} 
+            />
           </FormGroup>
           <FormGroup>
             <Label htmlFor="password">Senha</Label>
-            <InputField type="password" id="password" />
+            <InputField 
+              type="password" 
+              id="password" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+            />
           </FormGroup>
           <Options>
             <Label>

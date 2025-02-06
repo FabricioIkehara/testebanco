@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
   background: #FFFFFF;
-  width: 205.2px;
+  width: 600px; 
   height: 140px;
   padding: 16px;
   gap: 16px;
@@ -21,7 +21,7 @@ export const Card = styled.div`
 
   &.custom-received-card {
     color: #484848;
-    background: #F0F8FF;
+    background: #FFFFFF;
     box-shadow: 0px 4px 4px 0px #00000040;
   }
 
@@ -37,7 +37,9 @@ export const Card = styled.div`
   }
 
   &.custom-plus-card {
-    background: #EAE9E9;
+    width: 533px; /* Ajuste da largura para alinhar com o RightCard */
+    height: 140px;
+    background: #FFFFFF;
     color: #484848; 
     text-align: center;
     justify-content: center;
@@ -121,7 +123,8 @@ export const InvestmentHighlight = styled.div`
   padding: 5px;
   border-radius: 4px;
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
+  white-space: nowrap;
 `;
 
 export const CardDetails = styled.div`

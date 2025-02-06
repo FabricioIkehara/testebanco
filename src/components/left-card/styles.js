@@ -1,13 +1,12 @@
-// src/components/left-card/styles.js
 import styled from 'styled-components';
 
 export const LeftCardContainer = styled.div`
   width: 532px; 
   height: 300.49px;
-  margin-left: 316.12px;
+  margin-left: 20px;
   margin-top: 16px;
   padding: 24px;
-  border-radius: 8px 0px 0px 0px;
+  border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   opacity: 1;
@@ -31,39 +30,75 @@ export const CardContent = styled.div`
 `;
 
 export const CardImageSection = styled.div`
-//   width: 50%;
+  // width: 50%;
 `;
 
 export const CardDetailsSection = styled.div`
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 24px;
 `;
 
 export const CardDetails = styled.div`
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
   div {
     font-size: 14px;
     color: #666;
   }
 
-  .value {
-    font-size: 24px;
+   .value {
+    font-size: 20px;
     font-family: 'Lato', sans-serif;
     font-weight: 600;
     line-height: 24px;
-    text-align: center;
+    text-align: flex-start;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #484848;
+    
+  }
+
+  .value-limit {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    line-height: 24px;
+    margin-left: 30px;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #484848;
   }
 
+.value-last-buy {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    line-height: 24px;
+    margin-left: 30px;
+    gap: 12px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #484848;
+    max-width: 100%; /* Adiciona um limite de largura máxima */
+    white-space: nowrap; /* Impede a quebra de linha */
+    text-overflow: ellipsis; /* Adiciona reticências para texto longo */
+}
+
+/* Lógica para ajustar dinamicamente o tamanho da fonte */
+.value-last-buy[data-length="long"] {
+    font-size: 18px;
+}
+
   .limite-disponivel {
     width: 130px;
     height: 24px;
-    margin-left: 55px;
+    margin-left: 30px;
     gap: 0px;
     opacity: 1;
     font-family: 'Lato', sans-serif;
@@ -71,6 +106,17 @@ export const CardDetails = styled.div`
     font-weight: 300;
     line-height: 24px;
     text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .ultima-compra {
+    color: #484848;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-left: 30px;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
   }
@@ -86,10 +132,25 @@ export const CardImage = styled.div`
   color: #fff;
 `;
 
+export const LogoContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  width: 72.51px;
+  height: 15.64px;
+  gap: 0px;
+  opacity: 1;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
 export const ChipAndWifiContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 10px;
 
   img {
     width: 40px;
@@ -105,13 +166,20 @@ export const CardNumberContainer = styled.div`
   margin-top: 16px;
   font-size: 18px;
   letter-spacing: 2px;
+  font-family: JetBrains Mono;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 17.4px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
 `;
 
 export const CardInfoContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 24px;
+  margin-top: 10px;
 `;
 
 export const CardName = styled.div`
@@ -136,8 +204,8 @@ export const FooterSection = styled.div`
   height: 38px;  // Ajuste da altura para 38px
   gap: 0px;  // Espaçamento entre elementos
   justify-content: space-between;  // Alinhamento dos elementos com espaço entre eles
-  opacity: 1;  // Ajuste da opacidade para 1 (visível)
-  box-sizing: border-box; // Inclui preenchimentos e bordas na largura e altura total
+  opacity: 1;  
+  box-sizing: border-box; 
 `;
 
 export const ProgressBarWrapper = styled.div`
@@ -201,7 +269,7 @@ export const VectorYellow = styled.div`
   background: #DC9E3F;
   width: 17.4px;
   height: 17.4px;
-  top: 80%;
+  top: 90%;
   right: 15px;
   transform: translateY(-50%);
   opacity: 1;
@@ -213,7 +281,7 @@ export const VectorRed = styled.div`
   background: #E5031B;
   width: 17.4px;
   height: 17.4px;
-  top: 80%;
+  top: 90%;
   right: 25px;
   transform: translateY(-50%);
   opacity: 1;

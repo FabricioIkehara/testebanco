@@ -19,12 +19,17 @@ import {
   LimitTextWrapper,
   LimitText,
   VectorYellow,
-  VectorRed
+  VectorRed,
+  LogoContainer  // Import the new styled component
 } from './styles';
-
 
 import chipSvg from '../../assets/chip.svg';
 import wifiSvg from '../../assets/wifi.svg';
+import logoBranco from '../../assets/logo-branco.svg';  // Import the logo SVG
+
+const generateRandomCardNumber = () => {
+  return Array(4).fill(0).map(() => Math.floor(1000 + Math.random() * 9000)).join(' ');
+};
 
 const LeftCard = ({
   title,
@@ -32,12 +37,11 @@ const LeftCard = ({
   ultimaCompra,
   limiteMensal,
   progressoGasto,
-  logoSrc,
-  cardNumber,
   cardName,
   cardValidity = {},
 }) => {
   const { month = '05', year = '30' } = cardValidity;
+  const cardNumber = generateRandomCardNumber();
 
   return (
     <LeftCardContainer>
@@ -45,13 +49,16 @@ const LeftCard = ({
       <CardContent>
         <CardImageSection>
           <CardImage>
+            <LogoContainer>
+              <img src={logoBranco} alt="Logo MeuBanco" />
+            </LogoContainer>
             <ChipAndWifiContainer>
               <img src={chipSvg} alt="Chip" />
               <img src={wifiSvg} alt="WiFi Symbol" />
             </ChipAndWifiContainer>
             <CardNumberContainer>{cardNumber}</CardNumberContainer>
             <CardInfoContainer>
-            <CardName>{cardName}</CardName>
+              <CardName>{cardName}</CardName>
               <CardValidity>
                 <div>Validade</div>
                 <div>{month}/{year}</div>
@@ -62,15 +69,15 @@ const LeftCard = ({
           </CardImage>
         </CardImageSection>
         <CardDetailsSection>
-        <CardDetails>
-             <div className="limite-disponivel">Limite disponível</div>
-             <div className="value">{limiteDisponivel}</div>
-        </CardDetails>
-        <CardDetails>
-            <div>Última compra</div>
-            <div className="value">{`${ultimaCompra.local} - ${ultimaCompra.valor}`}</div>
-        </CardDetails>
-        </CardDetailsSection>
+            <CardDetails>
+              <div className="limite-disponivel">Limite disponível</div>
+              <div className="value value-limit">{limiteDisponivel}</div>
+            </CardDetails>
+            <CardDetails>
+              <div className="ultima-compra">Última compra</div>
+              <div className="value value-last-buy">{`${ultimaCompra.local}   ${ultimaCompra.valor}`}</div>
+            </CardDetails>
+          </CardDetailsSection>
       </CardContent>
       <FooterSection>
         <ProgressBarWrapper>

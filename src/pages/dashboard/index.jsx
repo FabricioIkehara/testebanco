@@ -1,11 +1,11 @@
 import React from 'react';
 import TopBar from '../../components/top/index';
-import Menu from '../../components/menu';
-import { Container, Content, CardsContainer, RightCard } from './styles';
+import { Container, Content, CardsContainer } from './styles';
 import SmallCard from '../../components/small-card/index';
 import { FaPlusCircle } from 'react-icons/fa';
 import { Percentage, InfoContainer, ReceivedInfoContainer, InvestmentHighlight, CardDetails } from '../../components/small-card/styles';
 import LeftCard from '../../components/left-card/index'; 
+import RightCard from '../../components/right-card/index';
 
 const Dashboard = () => {
   const userName = "Dak Prescott"; 
@@ -50,10 +50,19 @@ const Dashboard = () => {
     valor: "R$ 150,00"
   };
 
+  const purchases = [
+    { date: "02/jan", establishment: "Loja de Roupas", value: "R$ 250,00" },
+    { date: "02/jan", establishment: "Cafeteria", value: "R$ 30,00" },
+    { date: "02/jan", establishment: "Farmácia", value: "R$ 100,00" },
+    { date: "03/jan", establishment: "Supermercado", value: "R$ 150,00" },
+    { date: "03/jan", establishment: "Padaria", value: "R$ 20,00" },
+    { date: "03/jan", establishment: "Posto de Gasolina", value: "R$ 200,00" },
+    { date: "01/jan", establishment: "Loja de Roupas", value: "R$ 50,00" }
+  ];
+
   return (
     <Container>
-      <TopBar userName={userName} />  {/* Passando userName para o TopBar */}
-      <Menu />
+      <TopBar userName={userName} />  
       <Content>
         <CardsContainer>
           {cardsData.map((card, index) => (
@@ -116,10 +125,9 @@ const Dashboard = () => {
             progressoGasto="10%"
             cardName={userName}
           />
-          <RightCard>
-            <h3>Right Card</h3>
-            <p>Valor do Card Direito</p>
-          </RightCard>
+          <RightCard
+            purchases={purchases}
+          />
         </div>
       </Content>
     </Container>
